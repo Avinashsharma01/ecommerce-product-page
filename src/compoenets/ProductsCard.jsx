@@ -118,7 +118,7 @@ const ProductsCard = ({ product }) => {
                 <div className="flex items-center justify-between mt-2">
                     <div className="flex items-baseline">
                         <span className="text-xl font-bold text-blue-600">
-                            ${product.price}
+                            ₹{product.price}
                         </span>
                         {product.discountPercentage > 0 && (
                             <span className="text-xs text-gray-500 line-through ml-2">

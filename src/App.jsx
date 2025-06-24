@@ -7,6 +7,16 @@ import Header from "./compoenets/Header";
 import HeroSection from "./compoenets/HeroSection";
 import FilterSection from "./compoenets/FilterSection";
 import Footer from "./compoenets/Footer";
+import Products from "./pages/Products";
+import Categories from "./pages/Categories";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import FAQs from "./pages/FAQs";
+import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Returns from "./pages/Returns";
+import Shipping from "./pages/Shipping";
+import TermsOfService from "./pages/TermsOfService";
 
 const App = () => {
     const [items, setitems] = useState([]);
@@ -98,6 +108,16 @@ const App = () => {
                         path="/detail/:productId"
                         element={<ProductDetail />}
                     />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/categories" element={<Categories />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/faq" element={<FAQs />} />
+                    <Route path="/shipping" element={<Shipping />} />
+                    <Route path="/returns" element={<Returns />} />
+                    <Route path="/privacy" element={<PrivacyPolicy />} />
+                    <Route path="/terms" element={<TermsOfService />} />
+                    <Route path="/*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
         </>

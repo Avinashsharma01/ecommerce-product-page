@@ -1,49 +1,75 @@
+import { NavLink } from "react-router-dom";
+
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white mt-12">
+        <footer className="bg-indigo-800 text-white mt-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div>
                         <h3 className="text-lg font-bold mb-4">ShopMart</h3>
-                        <p className="text-gray-400 text-sm">
+                        <p className=" text-sm">
                             Your one-stop shop for all premium products at the
                             best prices.
                         </p>
                     </div>
                     <div>
                         <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-                        <ul className="space-y-2 text-sm text-gray-400">
+                        <ul className="space-y-2 text-sm ">
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors"
+                                <NavLink
+                                    to="/"
+                                    className={({ isActive }) =>
+                                        `transition-colors ${
+                                            isActive
+                                                ? "text-white"
+                                                : "hover:text-gray-500"
+                                        }`
+                                    }
                                 >
                                     Home
-                                </a>
+                                </NavLink>
                             </li>
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors"
+                                <NavLink
+                                    to="/products"
+                                    className={({ isActive }) =>
+                                        `transition-colors ${
+                                            isActive
+                                                ? "text-white"
+                                                : "hover:text-gray-500"
+                                        }`
+                                    }
                                 >
                                     Products
-                                </a>
+                                </NavLink>
                             </li>
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors"
+                                <NavLink
+                                    to="/categories"
+                                    className={({ isActive }) =>
+                                        `transition-colors ${
+                                            isActive
+                                                ? "text-white"
+                                                : "hover:text-gray-500"
+                                        }`
+                                    }
                                 >
                                     Categories
-                                </a>
+                                </NavLink>
                             </li>
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors"
+                                <NavLink
+                                    to="/about"
+                                    className={({ isActive }) =>
+                                        `transition-colors ${
+                                            isActive
+                                                ? "text-white"
+                                                : "hover:text-gray-500"
+                                        }`
+                                    }
                                 >
                                     About Us
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
@@ -51,44 +77,68 @@ const Footer = () => {
                         <h3 className="text-lg font-bold mb-4">
                             Customer Service
                         </h3>
-                        <ul className="space-y-2 text-sm text-gray-400">
+                        <ul className="space-y-2 text-sm ">
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors"
+                                <NavLink
+                                    to="/contact"
+                                    className={({ isActive }) =>
+                                        `transition-colors ${
+                                            isActive
+                                                ? "text-white"
+                                                : "hover:text-gray-500"
+                                        }`
+                                    }
                                 >
                                     Contact Us
-                                </a>
+                                </NavLink>
                             </li>
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors"
+                                <NavLink
+                                    to="/faq"
+                                    className={({ isActive }) =>
+                                        `transition-colors ${
+                                            isActive
+                                                ? "text-white"
+                                                : "hover:text-gray-500"
+                                        }`
+                                    }
                                 >
                                     FAQs
-                                </a>
+                                </NavLink>
                             </li>
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors"
+                                <NavLink
+                                    to="/shipping"
+                                    className={({ isActive }) =>
+                                        `transition-colors ${
+                                            isActive
+                                                ? "text-white"
+                                                : "hover:text-gray-500"
+                                        }`
+                                    }
                                 >
                                     Shipping
-                                </a>
+                                </NavLink>
                             </li>
                             <li>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors"
+                                <NavLink
+                                    to="/returns"
+                                    className={({ isActive }) =>
+                                        `transition-colors ${
+                                            isActive
+                                                ? "text-white"
+                                                : "hover:text-gray-500"
+                                        }`
+                                    }
                                 >
                                     Returns
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <h3 className="text-lg font-bold mb-4">Newsletter</h3>
-                        <p className="text-gray-400 text-sm mb-4">
+                        <p className=" text-sm mb-4">
                             Subscribe to get updates on new products and special
                             offers
                         </p>
@@ -96,7 +146,7 @@ const Footer = () => {
                             <input
                                 type="email"
                                 placeholder="Your email"
-                                className="px-4 py-2 text-gray-800 rounded-l-md w-full"
+                                className="px-4 py-2 text-white rounded-l-md w-full"
                             />
                             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md">
                                 Subscribe
@@ -104,21 +154,33 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center">
+                <div className="border-t border-gray-800 mt-8 pt-8 text-sm  flex flex-col sm:flex-row justify-between items-center">
                     <p>© 2025 ShopMart. All Rights Reserved.</p>
                     <div className="flex space-x-6 mt-4 sm:mt-0">
-                        <a
-                            href="#"
-                            className="hover:text-white transition-colors"
+                        <NavLink
+                            to="/privacy"
+                            className={({ isActive }) =>
+                                `transition-colors ${
+                                    isActive
+                                        ? "text-white"
+                                        : "hover:text-gray-500"
+                                }`
+                            }
                         >
                             Privacy Policy
-                        </a>
-                        <a
-                            href="#"
-                            className="hover:text-white transition-colors"
+                        </NavLink>
+                        <NavLink
+                            to="/terms"
+                            className={({ isActive }) =>
+                                `transition-colors ${
+                                    isActive
+                                        ? "text-white"
+                                        : "hover:text-gray-500"
+                                }`
+                            }
                         >
                             Terms of Service
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
             </div>
